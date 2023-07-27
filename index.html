@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Encuesta</title>    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main>
+    <div class="divLeft d-flex justify-content-center flex-column">        
+        <h2 id="title">Encuesta</h2>
+    <form class="p-2" action="/my-handling-form-page" method="post">
+        
+        <ul id="form">
+             <ul>
+                 <p>Cual es tu genero?</p>
+                 <label><input class="cuestionario" type="radio" name="gen" value="masc"> Masculino </label>
+                 <label><input class="cuestionario" type="radio" name="gen" value="fem"> Femenino </label>
+                 <label><input class="cuestionario" type="radio" name="gen" value="ind"> Indefinido</label>
+             </ul>
+             <ul>
+                 <p>Cual es tu turno?</p>
+                 <label><input class="cuestionario" type="radio" name="turno" value="tar"> Tarde </label>
+                 <label><input class="cuestionario" type="radio" name="turno" value="man"> Mañana </label>
+             </ul>
+             <ul>
+                 <p>Vas a estudiar una carrera universitaria?</p>
+                 <label><input id="estUni" class="cuestionario estUni" type="radio" name="estUni" value="siEstudia"> Si </label>
+                 <label><input id="noEstUni" class="cuestionario estUni" type="radio" name="estUni" value="noEstudia"> No </label>
+             
+             </ul>
+             <ul id="divInf" style="display: none;">
+                 <p>Esta relacionada con la informatica?</p>
+                 <label><input class="cuestionario" type="radio" name="estInform" value="siInform"> Si </label>
+                 <label><input class="cuestionario" type="radio" name="estInform" value="noInform"> No </label>
+             </ul>
+             <ul id="divTipoEdu" style="display: none;">
+                 <p>Que tipo de educacion vas a elegir?</p>
+                 <label><input class="cuestionario" type="radio" name="educacion" value="publica"> Publica </label>
+                 <label><input class="cuestionario" type="radio" name="educacion" value="privada"> Privada </label>
+             </ul>
+             <ul class="lastUl">
+                 <p>Estas trabajando?</p>
+                 <label><input class="cuestionario" type="radio" name="trabajando" value="siTrabaja"> Si </label>
+                 <label><input class="cuestionario" type="radio" name="trabajando" value="noTrabaja"> No </label>
+             </ul>
+             
+         </ul>         
+         <p id="mensaje" style="display: none">La encuesta a Finalizado</p>
+         <div id="btns" class="buttons">
+         <input id="btn" type="reset" value="Siguiente">
+         <button id="fin" onclick="final()">Finalizar</button>
+        </div>
+     </form>
+    </div>
+     <div class="divRight">
+        <p id="h3"></p>
+     </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
